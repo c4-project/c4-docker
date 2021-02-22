@@ -1,0 +1,9 @@
+[submodule "c4f"]
+	path = c4f
+	url = https://github.com/c4-project/c4f
+[submodule "c4t"]
+	path = c4t
+	url = https://github.com/c4-project/c4t
+[submodule "c4-corpora"]
+	path = c4-corpora
+	url = https://github.com/c4-project/c4-corpora
