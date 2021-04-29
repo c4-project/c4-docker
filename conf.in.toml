@@ -1,0 +1,25 @@
+# BEGIN CONFIGURATION COPIED FROM `conf.in.toml`
+
+# These paths should be kept in sync with Dockerfile
+[paths]
+  out_dir = "/home/c4/out"
+  # Change this to modify the default input corpus c4t sends to c4f.
+  inputs = ["/home/c4/corpora/partialSC/small"]
+
+[quantities]
+  # Make each run of the tester sample down to 20 subjects before fuzzing...
+  perturb.corpus_size = 20
+  # ...and after fuzzing.
+  fuzz.corpus_size = 20
+  # The various .workers quantities control the parallelisation in c4t.
+  fuzz.workers = 10
+  plan.workers = 10
+  lift.workers = 10
+  # These quantities control how long we wait for compilers and harnesses, and
+  # how many of them we can run at once.
+  mach.compiler.timeout = "2m"
+  mach.compiler.workers = 20
+  mach.runner.timeout = "1m"
+  mach.runner.workers = 1
+
+# END CONFIGURATION COPIED FROM `conf.in.toml`
